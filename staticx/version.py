@@ -11,7 +11,7 @@ PROJPATH = PACKAGEPATH.parent
 DIST_SPEC = 'staticx'
 
 # Base version, which will be augmented with Git information
-BASE_VERSION = '0.14.1'
+BASE_VERSION = '0.15.0'
 
 # This string will be replaced by `git-archive`
 # with the abbreviated commit hash
@@ -44,7 +44,7 @@ def get_version():
         else:
             # Ensure the base version matches the Git tag
             if tag != BASE_VERSION:
-                raise Exception('Git revision different from base version')
+                raise Exception(f'Git revision ({tag}) different from base version ({BASE_VERSION})')
 
             # No local version if we're on a tag
             if commits == 0 and not rev.endswith('dirty'):

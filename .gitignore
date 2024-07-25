@@ -10,7 +10,7 @@ __pycache__/
 
 # Setup.py stuff
 /build/
-/dist/
+# /dist/
 *.egg-info
 
 # Local conventions
